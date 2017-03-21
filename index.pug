@@ -1,0 +1,111 @@
+// Template of this presentation was inspired by "The quest for insights, the true objective of big data" by John Alexis Guerra Gómez http://infovis.co/bigDataQuest/  
+doctype html
+html
+  head
+    title Offline capabilities of PWAs
+    meta(charset='utf-8')
+    meta(name='author', content='Pawel Kaminski')
+    meta(name='description', content='Presentation for Capgemini Apps DE Architects & Engineers Summit 2017')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+    
+    link(href='style.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    
+ 
+  body
+    .reveal
+      .slides        
+        include ./slides/title.pug        
+        include ./slides/agenda.pug      
+        section
+          include ./slides/pwa/pwa01.pug
+          include ./slides/pwa/pwa02.pug
+          include ./slides/pwa/pwa03.pug
+          include ./slides/pwa/pwa04.pug
+          include ./slides/pwa/pwa05.pug
+          include ./slides/pwa/pwa06.pug
+          include ./slides/pwa/pwa07.pug
+          include ./slides/pwa/pwa08.pug
+          include ./slides/pwa/pwa09.pug
+          include ./slides/pwa/pwa10.pug
+          include ./slides/pwa/pwa11.pug      
+        section
+          include ./slides/cache/navigator.pug
+          include ./slides/cache/static01.pug
+          include ./slides/cache/static02.pug
+          include ./slides/cache/static03.pug
+          include ./slides/cache/static04.pug
+          include ./slides/cache/static05.pug
+          include ./slides/cache/static06.pug 
+          include ./slides/cache/static07.pug       
+        section
+     
+           include ./slides/cache/cache.pug           
+           include ./slides/cache/cacheFirst01.pug
+           include ./slides/cache/cacheFirst02.pug
+           include ./slides/cache/cacheFirst03.pug
+           include ./slides/cache/cacheFirst04.pug
+           include ./slides/cache/cacheFirst05.pug
+
+           
+           include ./slides/cache/networkFirst01.pug
+           include ./slides/cache/networkFirst02.pug
+           include ./slides/cache/networkFirst03.pug
+           include ./slides/cache/networkFirst04.pug
+           include ./slides/cache/networkFirst05.pug
+
+           include ./slides/cache/justNetwork01.pug
+           include ./slides/cache/justNetwork02.pug
+           
+           include ./slides/cache/justCache01.pug
+           include ./slides/cache/justCache02.pug
+
+           include ./slides/cache/race.pug
+
+
+      
+        section
+           include ./slides/data/data.01.pug
+           include ./slides/data/data.02.pug
+           include ./slides/data/data.03.pug
+           include ./slides/data/data.04.pug
+           include ./slides/data/data.05.pug
+           include ./slides/data/data.06.pug      
+        include ./slides/demo.pug 
+        include ./slides/missed.pug 
+        include ./slides/QA.pug 
+      
+        section
+           include ./slides/thankyou.pug           
+             
+
+    script(src='lib/js/head.min.js')
+    script(src='lib/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },       
+        ]
+      });
+     
+
+
+
+
+

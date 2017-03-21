@@ -1,0 +1,19 @@
+section#static06
+    pre
+        code.JavaScript 
+         |this.addEventListener('fetch', function(e) {
+         |   ...
+         | 
+    div.fragment
+       pre
+        code.JavaScript 
+         | e.respondWith(
+         |    caches.match(e.request).then(function(response) {
+         |      return response;
+         |    })
+         | );
+       pre
+        code.JavaScript 
+         | 
+         |   ...
+         | })

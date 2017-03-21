@@ -1,0 +1,23 @@
+section#static05
+   h2 What if we could
+   div.fragment
+       pre
+        code.JavaScript 
+         | var filesToCache = [
+         | '/',
+         | '/index.html',
+         | '/scripts/app.js',
+         | '/styles/inline.css',
+         | '/images/clear.png',
+         | '/images/cloudy-scatt.png'
+         | ] ; 
+
+   div.fragment
+     pre
+        code.JavaScript 
+            | caches.open("MyCache").then(function(cache) {
+            |     return cache.addAll(filesToCache);
+            |   })
+         
+         
+     
